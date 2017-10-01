@@ -2,6 +2,6 @@
 eureka:
  client:
   serviceUrl:
-   defaultZone: http://localhost:8010/eureka/
+   defaultZone: http://ubuntu@ec2-34-228-158-9.compute-1.amazonaws.com:8010/eureka/
    
 lucky-word: teste,teste2,teste3
