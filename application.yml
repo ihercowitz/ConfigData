@@ -3,3 +3,5 @@ eureka:
  client:
   serviceUrl:
    defaultZone: http://localhost:8010/eureka/
+   
+lucky-word: teste,teste2,teste3
