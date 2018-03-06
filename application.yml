@@ -1,7 +1,7 @@
 ---
-eureka:
- client:
-  serviceUrl:
-   defaultZone: http://ec2-34-235-153-242.compute-1.amazonaws.com:8010/eureka/
+#eureka:
+# client:
+#  serviceUrl:
+#   defaultZone: http://ec2-34-235-153-242.compute-1.amazonaws.com:8010/eureka/
    
-lucky-word: teste,teste2,teste3
+# lucky-word: teste,teste2,teste3
