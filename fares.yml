@@ -10,9 +10,10 @@ spring:
   sleuth:
     annotation:
       enabled: true
-  redis:
-    host: localhost
-    port: 6379
+  data:
+    mongodb:
+      database: fares
+      host: localhost
   oauth2:
     resource:
       userInfoUri: http://localhost:7777/credential
