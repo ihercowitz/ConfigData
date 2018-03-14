@@ -1,6 +1,11 @@
 server:
   port: 50015
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   sleuth:
     annotation:
       enabled: true
@@ -11,29 +16,7 @@ spring:
   oauth2:
     resource:
       userInfoUri: http://localhost:7777/credential
-  cloud:
-    stream:
-      bindings:
-        input:
-          destination: ex.stream.payments.responsed
-          group: payment
-          binder: rabbit1
-          content-type: application/json
-        output:
-          destination: ex.stream.payments.requested
-          group: payment
-          binder: rabbit1
-          content-type: application/json
-      binders:
-        rabbit1:
-          type: rabbit
-          environment:
-            spring:
-              rabbitmq:
-                host: localhost
-                port: 5672
-                username: guest
-                password: guest
+
 eureka:
   client:
     serviceUrl:
@@ -65,6 +48,22 @@ auth:
   service: AUTH
   path: /oauth/token
 
+amqp:
+  payments:
+    queue:
+      request: request_payment_queue
+      response: response_payment_queue
+    exchange:
+      payment: payments
+    key:
+      request: request_payment
+      response: response_payment
+  mail:
+    exchange:
+      mail: mails
+    queue:
+      request: send-mail-request
+
 config:
   oauth2:
     privateKey: |
@@ -89,4 +88,4 @@ config:
       b5PZmBz1ALN2YLvt341pH6i5mO1V9cX5Ty1LM70fKfnIoYUP4KCE33dPnC7LkUwE
       /myh1zM6m8cbL5cYFPyP099thbVxzJkjHWqywvQih/qOOjliomKbM9pxG8Z1dB26
       hL9dSAZuA8xExjlPmQIDAQAB
-      -----END PUBLIC KEY-----				
+      -----END PUBLIC KEY-----
