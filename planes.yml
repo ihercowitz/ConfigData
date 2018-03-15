@@ -38,3 +38,16 @@ management:
     cors:
       allowed-origins: "*"
       allowed-methods: GET,POST
+      
+---
+spring:
+   profiles: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}         
