@@ -2,7 +2,7 @@ server:
   port: 50001
 spring:
   rabbitmq:
-    host: ${rabbitmq.host:localhost}
+    host: localhost
     port: 5672
     username: guest
     password: guest
@@ -12,13 +12,13 @@ spring:
   data:
     mongodb:
       database: planes
-      host: ${mongodb.host:localhost}
+      host: localhost
    
       
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${eureka.host:localhost}:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
