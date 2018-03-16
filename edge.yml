@@ -86,8 +86,8 @@ zuul:
       sensitiveHeaders:
       serviceId: ecommerce
   host:
-    connectTimeoutMillis: 100000
-    socketTimeoutMillis: 100000
+    connectTimeoutMillis: 1000000
+    socketTimeoutMillis: 1000000
 proxy:
   auth:
     routes:
