@@ -25,6 +25,12 @@ eureka:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+flights:
+  service: FLIGHTS
+  oauth:
+    client_id: 917092f2d185310c0f4fa8ba3296e33d
+    client_secret: f7641c289245d5d43d0aa96d0c14dbc6afba31fc    
 
 config:
   oauth2:
