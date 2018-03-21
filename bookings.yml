@@ -49,6 +49,17 @@ auth:
   path: /oauth/token
 
 amqp:
+
+  bookings:
+    queue:
+      request: booking_created_queue
+      response: response_payment_queue
+    exchange:
+      booking: bookings
+    key:
+      request: booking_created
+      response: response_payment
+   
   payments:
     queue:
       request: request_payment_queue
