@@ -53,21 +53,17 @@ amqp:
   bookings:
     queue:
       request: booking_created_queue
-      response: response_payment_queue
     exchange:
       booking: bookings
     key:
       request: booking_created
-      response: response_payment
    
   payments:
     queue:
-      request: request_payment_queue
-      response: response_payment_queue
+      response: payment_updated_queue
     exchange:
       payment: payments
     key:
-      request: request_payment
       response: response_payment
   mail:
     exchange:
