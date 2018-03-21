@@ -42,14 +42,21 @@ management:
       allowed-methods: GET,POST
       
 amqp:
+
+  bookings:
+    queue:
+      request: booking_created_queue
+    exchange:
+      booking: bookings
+    key:
+      request: booking_created
+   
   payments:
     queue:
-      request: request_payment_queue
-      response: response_payment_queue
+      response: payment_updated_queue
     exchange:
       payment: payments
     key:
-      request: request_payment
       response: response_payment
   
 flight:
