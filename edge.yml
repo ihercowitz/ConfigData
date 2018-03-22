@@ -88,6 +88,9 @@ zuul:
   host:
     connectTimeoutMillis: 1000000
     socketTimeoutMillis: 1000000
+  
+  ribbonIsolationStrategy: THREAD    
+    
 proxy:
   auth:
     routes:
