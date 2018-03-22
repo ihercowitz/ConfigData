@@ -95,12 +95,7 @@ zuul:
         execution:
           timeout:
             enabled: false
-            
-  ribbon:
-    eureka:
-      enabled: true
-        readTimeout: 120000
-        connectTimeout: 3000            
+      
     
 proxy:
   auth:
