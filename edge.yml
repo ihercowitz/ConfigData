@@ -89,7 +89,18 @@ zuul:
     connectTimeoutMillis: 1000000
     socketTimeoutMillis: 1000000
   
-  ribbonIsolationStrategy: THREAD    
+  hystrix:
+    command:
+      default:
+        execution:
+          timeout:
+            enabled: false
+            
+  ribbon:
+    eureka:
+      enabled: true
+        ReadTimeout: 120000
+        ConnectTimeout: 3000            
     
 proxy:
   auth:
