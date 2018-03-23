@@ -20,6 +20,18 @@ eureka:
     healthCheckUrlPath: /actuator/health
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     
+categories:
+  service: CATEGORIES
+  path: /api/categories
+  
+projects:
+  service: PROJECTS
+  path: /api/projects
+  
+expertises:
+  service: EXPERTISES
+  path: /api/expertises  
+    
 management:
   security:
     enabled: false
