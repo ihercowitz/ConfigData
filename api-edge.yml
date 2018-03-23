@@ -1,1 +1,71 @@
+server:
+  port: 8888
 
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+eureka:
+  instance:
+      leaseRenewalIntervalInSeconds: 10
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+
+management:
+  security:
+    enabled: false
+  health:
+    defaults: true
+    sensitive: true
+  endpoints:
+    web:
+      expose: "*"
+    health:
+      show-details: true
+    cors:
+      allowed-origins: "*"
+      allowed-methods: GET,POST 
+
+zuul:
+  routes:
+    consultants:
+      path: /api/v1/consultants/**
+      sensitiveHeaders: 
+      serviceId: consultants
+    clients:
+      path: /api/v1/clients/**
+      sensitiveHeaders: 
+      serviceId: clients
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 60000
+                        
+            timeout:
+              enabled: false     
+              
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimeout: 20000   
