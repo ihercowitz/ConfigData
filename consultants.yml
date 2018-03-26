@@ -23,8 +23,8 @@ eureka:
 categories:
   service: CATEGORIES
   
-projects:
-  service: PROJECTS
+teams:
+  service: TEAMS
   
 expertises:
   service: EXPERTISES
