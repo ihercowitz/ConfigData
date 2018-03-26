@@ -22,15 +22,15 @@ eureka:
     
 categories:
   service: CATEGORIES
-  path: /api/categories
   
 projects:
   service: PROJECTS
-  path: /api/projects
   
 expertises:
   service: EXPERTISES
-  path: /api/expertises  
+
+sites:
+  service: SITES
     
 management:
   security:
