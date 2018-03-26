@@ -51,6 +51,18 @@ zuul:
       path: /api/v1/clients/**
       sensitiveHeaders: 
       serviceId: clients
+    categories:
+      path: /api/v1/categories/**
+      sensitiveHeaders: 
+      serviceId: categories
+    skills:
+      path: /api/v1/skills/**
+      sensitiveHeaders: 
+      serviceId: skills
+    sites:
+      path: /api/v1/sites/**
+      sensitiveHeaders: 
+      serviceId: sites      
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
