@@ -25,6 +25,15 @@ clients:
 
 consultants:
   service: CONSULTANTS
+  
+teams:
+  service: TEAMS
+  
+skills:
+  service: SKILLS
+
+sites:
+  service: SITES  
 
 amqp:
 
