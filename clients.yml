@@ -34,3 +34,12 @@ management:
     cors:
       allowed-origins: "*"
       allowed-methods: GET,POST
+      
+amqp:
+  projects:
+    queue:
+      request: project_created_queue
+    exchange:
+      project: projects
+    key:
+      request: project_created      
