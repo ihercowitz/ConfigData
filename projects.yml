@@ -36,11 +36,10 @@ sites:
   service: SITES  
 
 amqp:
-
   projects:
     queue:
       request: project_created_queue
     exchange:
-      booking: projects
+      project: projects
     key:
       request: project_created
