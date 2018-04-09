@@ -33,4 +33,4 @@ management:
       show-details: true
     cors:
       allowed-origins: "*"
-allowed-methods: GET,POST
+      allowed-methods: GET,POST,PUT
