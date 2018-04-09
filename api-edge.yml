@@ -81,3 +81,22 @@ hystrix:
 ribbon:
   ReadTimeout: 6000
   ConnectTimeout: 20000   
+
+---
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:8761/eureka/
+      
+spring:
+  rabbitmq:
+    host: ${rabbitmq.host:localhost}
+    port: 5672
+    username: guest
+    password: guest
+  sleuth:
+    annotation:
+      enabled: true
