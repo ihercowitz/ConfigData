@@ -62,10 +62,18 @@ zuul:
     sites:
       path: /api/v1/sites/**
       sensitiveHeaders: 
-      serviceId: sites      
+      serviceId: sites
+    projects:
+      path: /api/v1/projects/**
+      sensitiveHeaders: 
+      serviceId: projects
+    teams:
+      path: /api/v1/teams/**
+      sensitiveHeaders: 
+      serviceId: teams       
   host:
-    connect-timeout-millis: 10000
-    socket-timeout-millis: 60000
+    connect-timeout-millis: 100000
+    socket-timeout-millis: 100000
   
 hystrix:
     command:
@@ -73,14 +81,14 @@ hystrix:
             execution:
                 isolation:
                     thread:
-                        timeoutInMilliseconds: 60000
+                        timeoutInMilliseconds: 100000
                         
             timeout:
               enabled: false     
               
 ribbon:
-  ReadTimeout: 6000
-  ConnectTimeout: 20000   
+  ReadTimeout: 10000
+  ConnectTimeout: 200000   
 
 ---
 spring:
