@@ -34,3 +34,27 @@ management:
     cors:
       allowed-origins: "*"
       allowed-methods: GET,POST,PUT
+
+amqp:
+  projects:
+    queue:
+      request: team_created_queue
+    exchange:
+      project: teams
+    key:
+      request: team_created
+      
+clients:
+  service: CLIENTS
+
+consultants:
+  service: CONSULTANTS
+  
+projects:
+  service: PROJECTS
+  
+skills:
+  service: SKILLS
+
+sites:
+  service: SITES  
