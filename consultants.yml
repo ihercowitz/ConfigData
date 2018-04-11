@@ -46,3 +46,27 @@ management:
     cors:
       allowed-origins: "*"
       allowed-methods: GET,POST
+      
+---
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:8761/eureka/
+      
+spring:
+ data:
+    mongodb:
+      host: ${db.host:localhost}
+  rabbitmq:
+    host: ${rabbitmq.host:localhost}
+    port: 5672
+    username: guest
+    password: guest
+  sleuth:
+    annotation:
+      enabled: true
+    
+      
