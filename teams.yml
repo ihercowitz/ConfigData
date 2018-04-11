@@ -58,3 +58,26 @@ skills:
 
 sites:
   service: SITES  
+    
+---
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:8761/eureka/
+      
+spring:
+ data:
+    mongodb:
+      database: teams
+      host: ${db.host:localhost}
+  rabbitmq:
+    host: ${rabbitmq.host:localhost}
+    port: 5672
+    username: guest
+    password: guest
+  sleuth:
+    annotation:
+      enabled: true
