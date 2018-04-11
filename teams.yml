@@ -36,13 +36,22 @@ management:
       allowed-methods: GET,POST,PUT
 
 amqp:
-  projects:
+  teams:
     queue:
-      request: team_created_queue
+      created:
+        request: team_created_queue
+      updated:
+        request: team_updated_queue
     exchange:
-      project: teams
+      created:
+        team: teams
+      updated:
+        team: teams
     key:
-      request: team_created
+      created:
+        request: team_created
+      updated:
+        request: team_updated
       
 clients:
   service: CLIENTS
