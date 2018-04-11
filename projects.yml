@@ -54,6 +54,9 @@ eureka:
       defaultZone: http://${eureka.host:localhost}:8761/eureka/
       
 spring:
+ data:
+    mongodb:
+      host: ${db.host:localhost}
   rabbitmq:
     host: ${rabbitmq.host:localhost}
     port: 5672
@@ -62,4 +65,4 @@ spring:
   sleuth:
     annotation:
       enabled: true
-      
+    
