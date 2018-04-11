@@ -19,3 +19,26 @@ eureka:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+---
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:8761/eureka/
+      
+spring:
+ data:
+    mongodb:
+      host: ${db.host:localhost}
+  rabbitmq:
+    host: ${rabbitmq.host:localhost}
+    port: 5672
+    username: guest
+    password: guest
+  sleuth:
+    annotation:
+      enabled: true
+    
