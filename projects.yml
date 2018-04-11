@@ -43,3 +43,23 @@ amqp:
       project: projects
     key:
       request: project_created
+      
+---
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:8761/eureka/
+      
+spring:
+  rabbitmq:
+    host: ${rabbitmq.host:localhost}
+    port: 5672
+    username: guest
+    password: guest
+  sleuth:
+    annotation:
+      enabled: true
+      
