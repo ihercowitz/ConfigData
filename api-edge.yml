@@ -70,7 +70,11 @@ zuul:
     teams:
       path: /api/v1/teams/**
       sensitiveHeaders: 
-      serviceId: teams       
+      serviceId: teams
+    leaders:
+      path: /api/v1/leaders/**
+      sensitiveHeaders: 
+      serviceId: leaders
   host:
     connect-timeout-millis: 100000
     socket-timeout-millis: 100000
