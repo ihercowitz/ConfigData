@@ -46,3 +46,20 @@ amqp:
     key:
       created:
         request: project_created
+  
+  teams:
+    queue:
+      created:
+        request: team_created_queue
+      updated:
+        request: team_updated_queue
+    exchange:
+      created:
+        team: teams
+      updated:
+        team: teams
+    key:
+      created:
+        request: team_created
+      updated:
+        request: team_updated
