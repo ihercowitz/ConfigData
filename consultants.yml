@@ -31,6 +31,9 @@ skills:
 
 sites:
   service: SITES
+  
+leaders:
+  service: LEADERS  
     
 management:
   security:
