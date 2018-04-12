@@ -41,8 +41,11 @@ management:
 amqp:
   projects:
     queue:
-      request: project_created_queue
+      created:
+        request: project_created_queue
     exchange:
-      project: projects
+      created:
+        project: projects
     key:
-      request: project_created      
+      created:
+        request: project_created
