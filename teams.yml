@@ -42,16 +42,34 @@ amqp:
         request: team_created_queue
       updated:
         request: team_updated_queue
+      add-consultant:
+        request: add_consultant_team_queue
+      update-consultant:
+        request: update_consultant_team_queue
+      remove-consultant:
+        request: remove_consultant_team_queue
     exchange:
       created:
         team: teams
       updated:
+        team: teams
+      add-consultant:
+        team: teams
+      update-consultant:
+        team: teams
+      remove-consultant:
         team: teams
     key:
       created:
         request: team_created
       updated:
         request: team_updated
+      add-consultant:
+        request: add_consultant_team
+      update-consultant:
+        request: update_consultant_team
+      remove-consultant:
+        request: remove_consultant_team
       
 clients:
   service: CLIENTS
