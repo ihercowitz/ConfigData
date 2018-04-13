@@ -56,7 +56,6 @@ amqp:
       consultant:
         added:
           request: consultant_added_team_queue
-          
     key:
       consultant:
         added:
@@ -64,6 +63,7 @@ amqp:
   
   teams:
     queue:
+      consultant:
         updated:
           request: consultant_updated_team_queue
         removed:
