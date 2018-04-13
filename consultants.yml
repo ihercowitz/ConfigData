@@ -51,33 +51,27 @@ management:
       allowed-methods: GET,POST
       
 amqp:
-  consultants:
-    queue:
-      consultant:
-        added:
-          request: consultant_added_allocation_queue
-    key:
-      consultant:
-        added:
-          request: consultant_added_team
-  
   teams:
     queue:
       consultant:
+        added:
+          request: consultant_added_team_response_queue
         updated:
-          request: consultant_updated_team_queue
+          request: consultant_updated_team_response_queue
         removed:
-          request: consultant_removed_team_queue
+          request: consultant_removed_team_response_queue
     exchange:
       consultant:
         added:
-          team: teams_topic
+          team: teams_added
         updated:
-          team: teams
+          team: teams_updated
         removed:
-          team: teams
+          team: teams_removed
     key:
       consultant:
+        added:
+          request: consultant_added_team      
         updated:
           request: consultant_updated_team
         removed:
