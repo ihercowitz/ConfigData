@@ -55,11 +55,11 @@ amqp:
     queue:
       consultant:
         added:
-          request: consultant_added_team_queue
+          request: consultant_added_allocation_queue
     key:
       consultant:
         added:
-          request: consultant_added_team          
+          request: consultant_added_allocation
   
   teams:
     queue:
