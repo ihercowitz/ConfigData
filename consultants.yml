@@ -55,11 +55,11 @@ amqp:
     queue:
       consultant:
         added:
-          request: consultant_added_team_response_queue
+          request: consultant_added_team_consultants_response_queue
         updated:
-          request: consultant_updated_team_response_queue
+          request: consultant_added_team_consultants_response_queue
         removed:
-          request: consultant_removed_team_response_queue
+          request: consultant_added_team_consultants_response_queue
     exchange:
       consultant:
         added:
@@ -75,4 +75,4 @@ amqp:
         updated:
           request: consultant_updated_team
         removed:
-          request: consultant_removed_team      
+          request: consultant_removed_team    
