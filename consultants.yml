@@ -51,6 +51,12 @@ management:
       allowed-methods: GET,POST
       
 amqp:
+  consultants:
+    queue:
+      consultant:
+        added:
+          request: consultant_added_team_queue
+  
   teams:
     queue:
       consultant:
