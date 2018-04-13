@@ -55,11 +55,11 @@ amqp:
         request: team_updated_queue
       consultant:
         added:
-          request: consultant_added_team_queue
+          request: consultant_added_team_projects_response_queue
         updated:
-          request: consultant_updated_team_queue
+          request: consultant_updated_team_projects_response_queue
         removed:
-          request: consultant_removed_team_queue
+          request: consultant_removed_team_projects_response_queue
     exchange:
       created:
         team: teams
@@ -67,11 +67,11 @@ amqp:
         team: teams
       consultant:
         added:
-          team: teams_topic
+          team: teams_added
         updated:
-          team: teams
+          team: teams_updated
         removed:
-          team: teams
+          team: teams_removed
     key:
       created:
         request: team_created
