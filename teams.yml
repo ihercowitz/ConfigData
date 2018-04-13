@@ -56,11 +56,11 @@ amqp:
         team: teams
       consultant:
         added:
-          team: teams_topic
+          team: teams_added
         updated:
-          team: teams
+          team: teams_updated
         removed:
-          team: teams
+          team: teams_removed
     key:
       created:
         request: team_created
