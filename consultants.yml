@@ -71,7 +71,7 @@ amqp:
     exchange:
       consultant:
         added:
-          team: teams
+          team: teams_topic
         updated:
           team: teams
         removed:
