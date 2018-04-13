@@ -49,3 +49,30 @@ management:
     cors:
       allowed-origins: "*"
       allowed-methods: GET,POST
+      
+amqp:
+  teams:
+    queue:
+      consultant:
+        added:
+          request: consultant_added_team_queue
+        updated:
+          request: consultant_updated_team_queue
+        removed:
+          request: consultant_removed_team_queue
+    exchange:
+      consultant:
+        added:
+          team: teams
+        updated:
+          team: teams
+        removed:
+          team: teams
+    key:
+      consultant:
+        added:
+          request: consultant_added_team
+        updated:
+          request: consultant_updated_team
+        removed:
+          request: consultant_removed_team      
