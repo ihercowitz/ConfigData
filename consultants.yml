@@ -59,7 +59,7 @@ amqp:
     key:
       consultant:
         added:
-          request: consultant_added_allocation
+          request: consultant_added_team
   
   teams:
     queue:
