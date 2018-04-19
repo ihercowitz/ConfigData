@@ -87,4 +87,3 @@ amqp:
           request: consultant_removed_team
         finished:
           request: consultant_finished_team
-	
