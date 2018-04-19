@@ -42,7 +42,7 @@ amqp:
   projects:
     queue:
       created:
-        request: project_created_response_queue
+        request: project_created_clients_response_queue
     exchange:
       created:
         project: projects_created
