@@ -37,34 +37,20 @@ management:
 
 amqp:
   teams:
-    queue:
-      created:
-        request: team_created_queue
-      updated:
-        request: team_updated_queue
-      consultant:
-        added:
-          request: consultant_added_team_queue
-        updated:
-          request: consultant_updated_team_queue
-        removed:
-          request: consultant_removed_team_queue
-        finished:
-          request: consultant_finished_team_queue
     exchange:
       created:
-        team: teams
+        team: teams_created
       updated:
-        team: teams
+        team: teams_updated
       consultant:
         added:
-          team: teams_added
+          team: teams_consultant_added
         updated:
-          team: teams_updated
+          team: teams_consultant_updated
         removed:
-          team: teams_removed
+          team: teams_consultant_removed
         finished:
-          team: teams_finished
+          team: teams_consultant_finished
     key:
       created:
         request: team_created
