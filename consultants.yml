@@ -57,9 +57,11 @@ amqp:
         added:
           request: consultant_added_team_consultants_response_queue
         updated:
-          request: consultant_added_team_consultants_response_queue
+          request: consultant_updated_team_consultants_response_queue
         removed:
-          request: consultant_added_team_consultants_response_queue
+          request: consultant_removed_team_consultants_response_queue
+        finished:
+          request: consultant_finished_team_consultants_response_queue
     exchange:
       consultant:
         added:
