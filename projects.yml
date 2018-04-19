@@ -47,9 +47,9 @@ amqp:
   teams:
     queue:
       created:
-        request: team_created_response_queue
+        request: team_created_projects_response_queue
       updated:
-        request: team_updated_response_queue
+        request: team_updated_projects_response_queue
       consultant:
         added:
           request: consultant_added_team_projects_response_queue
@@ -87,3 +87,4 @@ amqp:
           request: consultant_removed_team
         finished:
           request: consultant_finished_team
+	
