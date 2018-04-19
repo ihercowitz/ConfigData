@@ -63,11 +63,13 @@ amqp:
     exchange:
       consultant:
         added:
-          team: teams_added
+          team: teams_consultant_added
         updated:
-          team: teams_updated
+          team: teams_consultant_updated
         removed:
-          team: teams_removed
+          team: teams_consultant_removed
+        finished:
+          team: teams_consultant_finished
     key:
       consultant:
         added:
@@ -75,4 +77,7 @@ amqp:
         updated:
           request: consultant_updated_team
         removed:
-          request: consultant_removed_team    
+          request: consultant_removed_team  
+        finished:
+          request: consultant_finished_team
+          
