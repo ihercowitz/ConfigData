@@ -45,7 +45,7 @@ amqp:
         request: project_created_response_queue
     exchange:
       created:
-        project: projects
+        project: projects_created
     key:
       created:
         request: project_created
