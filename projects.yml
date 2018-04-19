@@ -50,9 +50,9 @@ amqp:
   teams:
     queue:
       created:
-        request: team_created_queue
+        request: team_created_response_queue
       updated:
-        request: team_updated_queue
+        request: team_updated_response_queue
       consultant:
         added:
           request: consultant_added_team_projects_response_queue
@@ -64,18 +64,18 @@ amqp:
           request: consultant_finished_team_projects_response_queue
     exchange:
       created:
-        team: teams
+        team: teams_created
       updated:
-        team: teams
+        team: teams_updated
       consultant:
         added:
-          team: teams_added
+          team: teams_consultant_added
         updated:
-          team: teams_updated
+          team: teams_consultant_updated
         removed:
-          team: teams_removed
+          team: teams_consultant_removed
         finished:
-          team: teams_finished
+          team: teams_consultant_finished
     key:
       created:
         request: team_created
