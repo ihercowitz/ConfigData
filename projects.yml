@@ -37,12 +37,9 @@ sites:
 
 amqp:
   projects:
-    queue:
-      created:
-        request: project_created_queue
     exchange:
       created:
-        project: projects
+        project: projects_created
     key:
       created:
         request: project_created
