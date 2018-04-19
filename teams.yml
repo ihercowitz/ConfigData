@@ -49,6 +49,8 @@ amqp:
           request: consultant_updated_team_queue
         removed:
           request: consultant_removed_team_queue
+        finished:
+          request: consultant_finished_team_queue
     exchange:
       created:
         team: teams
@@ -61,6 +63,8 @@ amqp:
           team: teams_updated
         removed:
           team: teams_removed
+        finished:
+          team: teams_finished
     key:
       created:
         request: team_created
@@ -73,6 +77,8 @@ amqp:
           request: consultant_updated_team
         removed:
           request: consultant_removed_team
+        finished:
+          request: consultant_finished_team
       
 clients:
   service: CLIENTS
