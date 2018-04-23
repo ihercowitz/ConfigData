@@ -4,4 +4,4 @@ cassandra:
   keyspace: myKeyspace
   basepackages: com.eventstore
   startup:
-    script: CREATE KEYSPACE IF NOT EXISTS ${cassandra.keyspace} WITH replication = {‘class’:’SimpleStrategy’, ‘replication_factor’ : 1};  
+    script: CREATE KEYSPACE IF NOT EXISTS ${cassandra.keyspace} WITH replication = {‘class’:’SimpleStrategy’, ‘replication_factor’ : 1} 
