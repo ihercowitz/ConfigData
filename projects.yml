@@ -41,12 +41,12 @@ amqp:
       created:
         project: projects_created
       closed:
-        project: close_project_exchange
+        project: projects_closed
     key:
       created:
         request: project_created
       closed:
-        request: close_project_key
+        request: project_closed
   
   teams:
     queue:
