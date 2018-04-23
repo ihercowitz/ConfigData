@@ -1,6 +1,5 @@
 cassandra:
-  contactpoints:
-    127.0.0.1
-  port:9042
-  keyspace:myKeyspace
-  basepackages=com.eventstore
+  contactpoints: 127.0.0.1
+  port: 9042
+  keyspace: myKeyspace
+  basepackages: com.eventstore
