@@ -33,7 +33,10 @@ skills:
   service: SKILLS
 
 sites:
-  service: SITES  
+  service: SITES
+  
+events:
+  service: EVENTS  
 
 amqp:
   projects:
