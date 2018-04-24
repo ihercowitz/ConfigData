@@ -33,7 +33,10 @@ sites:
   service: SITES
   
 leaders:
-  service: LEADERS  
+  service: LEADERS
+
+events:
+  service: EVENTS
     
 management:
   security:
