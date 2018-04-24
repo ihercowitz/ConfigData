@@ -21,7 +21,10 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     
 projects:
-  service: PROJECTS    
+  service: PROJECTS   
+  
+events:
+  service: EVENTS  
 
 management:
   security:
