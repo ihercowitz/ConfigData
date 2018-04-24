@@ -80,3 +80,6 @@ skills:
 
 sites:
   service: SITES  
+  
+events:
+  service: EVENTS  
