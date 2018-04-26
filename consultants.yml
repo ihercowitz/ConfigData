@@ -54,6 +54,23 @@ management:
       allowed-methods: GET,POST
       
 amqp:
+
+  consultants:
+    exchange:
+      created:
+        consultant: consultants_created
+      updated:
+        consultant: consultants_updated
+      removed:
+        consultant: consultants_removed
+    key:
+      created:
+        request: consultant_created
+      updated:
+        request: consultant_updated
+      removed:
+        request: consultant_removed
+
   events:
     queue:
       created:
