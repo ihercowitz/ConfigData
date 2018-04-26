@@ -39,6 +39,21 @@ management:
       allowed-methods: GET,POST
       
 amqp:
+  clients:
+    exchange:
+      created:
+        client: clients_created
+      updated:
+        client: clients_updated
+      removed:
+        client: clients_removed
+    key:
+      created:
+        request: client_created
+      updated:
+        request: client_updated
+      removed:
+        request: client_removed        
   events:
     queue:
       created:
