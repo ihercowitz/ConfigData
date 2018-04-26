@@ -22,9 +22,6 @@ eureka:
     
 projects:
   service: PROJECTS   
-  
-events:
-  service: EVENTS  
 
 management:
   security:
@@ -42,6 +39,15 @@ management:
       allowed-methods: GET,POST
       
 amqp:
+  events:
+    queue:
+      created:
+        request: event_request_queue
+    exchange:
+      created: events_created
+    key:
+      created:
+        request: event_created
   projects:
     queue:
       created:
