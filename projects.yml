@@ -52,11 +52,15 @@ amqp:
         project: projects_created
       closed:
         project: projects_closed
+      updated:
+        project: projects_updated
     key:
       created:
         request: project_created
       closed:
         request: project_closed
+      updated:
+        request: project_updated
   
   teams:
     queue:
