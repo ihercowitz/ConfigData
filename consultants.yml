@@ -54,6 +54,15 @@ management:
       allowed-methods: GET,POST
       
 amqp:
+  events:
+    queue:
+      created:
+        request: event_request_queue
+    exchange:
+      created: events_created
+    key:
+      created:
+        request: event_created
   teams:
     queue:
       consultant:
