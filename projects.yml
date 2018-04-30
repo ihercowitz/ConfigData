@@ -34,6 +34,10 @@ skills:
 
 sites:
   service: SITES
+  
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG  
 
 amqp:
   events:
