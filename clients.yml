@@ -47,13 +47,16 @@ amqp:
         client: clients_updated
       removed:
         client: clients_removed
+      updated-projects:
+        client: clients_updated_projects
     key:
       created:
         request: client_created
       updated:
         request: client_updated
       removed:
-        request: client_removed        
+        request: client_removed
+      updated-projects: client_updated_projects
   events:
     queue:
       created:
